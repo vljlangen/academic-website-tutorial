@@ -1,0 +1,59 @@
+---
+title: "How to Build a Zero-Cost Academic Homepage Using Open-Source Tools"
+subtitle: "Get Your Professional Website Online in 30 Minutes"
+author: "Ville Langén"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: yourusername/academic-website-tutorial
+description: "The fastest way to create a professional academic website using Hugo and HugoBlox Academic CV template. Go from zero to live website in under 30 minutes."
+---
+
+# Welcome {-}
+
+**Get your professional academic website online in 30 minutes.**
+
+This guide gets you from zero to a live, professional academic website using the proven [HugoBlox Academic CV template](https://github.com/HugoBlox/theme-academic-cv) trusted by 250,000+ researchers worldwide.
+
+## Our Approach {-}
+
+This method combines four powerful, free tools:
+
+- 🔧 **Hugo** - Fast static site generator for building websites
+- 🎨 **Hugo Blox Academic CV** — a free template from the open-source Hugo Blox project
+- 📁 **GitHub** - Code storage and version control
+- 🌐 **Netlify** - Web hosting with automatic deployments
+
+All tools are open-source and zero-cost for academic use. You don’t need to understand what these tools are or how they work just yet — you’ll have a solid grasp in about 30 minutes.
+
+## What You'll Build {-}
+
+A professional academic website, hosted absolutely free of charge on Netlify, featuring:
+
+- ✨ **Your professional bio** and photo
+- 📄 **Publications** and research projects  
+- 🎓 **CV/resume** integration
+- 📧 **Contact information** and social links
+- 🌐 **Live on the internet** with your own URL
+- 🔄 **Auto-updates** when you make changes
+
+## The Guide {-}
+
+**5 focused chapters:**
+
+1. **Introduction** - Why this approach works and what you'll learn
+2. **Setup** - Install Git, Hugo, and choose an editor  
+3. **Quick Start** - Clone template and customize with your info
+4. **GitHub** - Save your work and enable deployment
+5. **Deploy** - Go live with Netlify
+
+**Time commitment**: 30 minutes to live website.
+
+---
+
+🚀 **Let's get started!**
+

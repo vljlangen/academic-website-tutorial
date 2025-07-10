@@ -1,0 +1,49 @@
+# Academic Website in 30 Minutes
+
+**Goal**: Get your professional academic website online in under 30 minutes.
+
+**What you'll have by the end**:
+- Professional academic website showcasing your research
+- Live on the internet with your own domain
+- Easy to update with new publications and projects
+
+## Why This Approach?
+
+Most academics need a website **now**, not after reading 200 pages of documentation. This guide gets you online fast using the battle-tested [HugoBlox Academic CV template](https://github.com/HugoBlox/theme-academic-cv) used by 250,000+ researchers.
+
+**The 5-Step Process:**
+
+1. **Setup** (10 min): Install tools and pick an editor
+2. **Clone** (5 min): Download the academic template  
+3. **Customize** (10 min): Add your info and photo
+4. **Git** (3 min): Save your work and push to GitHub
+5. **Deploy** (2 min): Go live with Netlify
+
+## What You'll Learn
+
+**Essential Skills Only:**
+
+- Basic Git commands for your website
+- Running a local development server
+- Making simple content changes
+- Deploying to the web
+
+This is the fastest path from zero to professional academic website.
+
+## Prerequisites
+
+**You need:**
+
+- A computer (Mac, Windows, or Linux)
+- Internet connection
+- 30 minutes of focused time
+
+**You don't need:**
+
+- Prior web development experience
+- Knowledge of HTML/CSS/JavaScript
+- Understanding of static site generators
+
+---
+
+Let's get started! 

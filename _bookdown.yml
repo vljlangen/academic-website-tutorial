@@ -1,0 +1,11 @@
+book_filename: "academic-website-quick-start"
+chapter_name: "Chapter "
+repo: https://github.com/yourusername/academic-website-tutorial
+output_dir: "_book"
+rmd_files: ["index.Rmd",
+            "01-introduction.Rmd",
+            "02-setup.Rmd", 
+            "03-quick-start.Rmd",
+            "04-git-github.Rmd",
+            "05-netlify-deployment.Rmd"]
+delete_merged_file: true

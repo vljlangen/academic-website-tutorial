@@ -1,0 +1,207 @@
+# Essential Setup
+
+Install three tools and you're ready to go:
+
+1. **Git** - Save and sync your website
+2. **Hugo** - Build your website  
+3. **Editor** - Edit your content
+
+## Step 1: Install Git
+
+### macOS
+
+**Git is already installed** on your Mac! No additional installation needed.
+
+### Windows
+
+**Download and install** from [git-scm.com](https://git-scm.com/download/win)
+
+**Important**: During installation, select "Git Bash" for command line access.
+
+### Linux (Ubuntu/Debian)
+
+```bash
+sudo apt update
+sudo apt install git
+```
+
+### Verify Git Installation
+
+```bash
+git --version
+# Should show: git version 2.x.x
+```
+
+## Step 2: Install Hugo Extended
+
+Hugo builds your website. You need the **extended** version.
+
+### macOS
+
+```bash
+# Using Homebrew
+brew install hugo
+```
+
+### Windows
+
+**Using Chocolatey** (install Chocolatey first from [chocolatey.org](https://chocolatey.org/install)):
+```bash
+choco install hugo-extended
+```
+
+**Or download directly** from [Hugo releases](https://github.com/gohugoio/hugo/releases) - get the "extended" version.
+
+### Linux (Ubuntu/Debian)
+
+```bash
+# Install extended version
+sudo apt install hugo
+
+# Or download from GitHub releases for latest version
+```
+
+### Verify Hugo Installation
+
+```bash
+hugo version
+# Should show: hugo v0.119.0+extended (includes "extended")
+```
+
+**Important**: Must include "extended" in the output.
+
+## Step 3: Choose Your Editor
+
+### VS Code (Recommended for Beginners)
+
+- Free and feature-rich
+- Excellent Markdown support
+- Git integration
+- Extensions for Hugo development
+- Download: [code.visualstudio.com](https://code.visualstudio.com/)
+
+### Cursor AI (AI-Powered Coding)
+
+- VS Code fork with AI assistance
+- Built-in AI code completion and chat
+- Excellent for learning and productivity
+- Hugo and Markdown support
+- Download: [cursor.sh](https://cursor.sh/)
+
+### RStudio (If You Use R)
+
+- Excellent for R Markdown integration
+- Good Markdown support
+- Built-in Git interface
+- Download: [rstudio.com](https://www.rstudio.com/products/rstudio/download/)
+
+### Quick VS Code Setup
+
+If you chose VS Code, install these extensions:
+
+1. Open VS Code
+2. Click Extensions icon (squares in sidebar)
+3. Install: "Hugo Language and Syntax Support"
+4. Install: "Markdown All in One"
+
+## Step 4: Git Configuration & Authentication
+
+### Basic Identity Setup
+
+Set your identity for Git:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@university.edu"
+```
+
+### GitHub Account Setup
+
+**First, create your GitHub account** (if you don't have one):
+
+1. **Go to** [github.com](https://github.com)
+2. **Sign up** for a free account
+3. **Choose a username** (this will be part of your website URL)
+
+### GitHub Authentication (Required)
+
+GitHub requires a **Personal Access Token (PAT)** instead of passwords for Git operations.
+
+**Create your PAT**: [https://github.com/settings/tokens](https://github.com/settings/tokens)
+
+💡 **Note**: If you choose the R approach below, `usethis::create_github_token()` will open this page for you automatically.
+
+### macOS Authentication Setup
+
+**Option 1: R + RStudio + usethis + gitcreds**
+
+Best for R users:
+
+```r
+# In R or RStudio:
+install.packages(c("usethis", "gitcreds"))
+usethis::create_github_token()  # Opens browser to create PAT
+gitcreds::gitcreds_set()        # Enter your PAT when prompted
+```
+
+**Option 2: Git CLI + macOS Keychain**
+
+Best for command-line Git users:
+
+```bash
+# Enable secure credential storage
+git config --global credential.helper osxkeychain
+```
+
+📌 This ensures your PAT is stored in the macOS Keychain and reused silently.
+
+When you clone or push, you'll be asked for:
+
+- **Username**: `your_github_username`
+- **Password**: `your_PAT_here`
+
+✅ Git will remember the token after this — no need to reenter.
+
+### Windows Authentication Setup
+
+**Option 1: R + RStudio + usethis + gitcreds**
+
+Best for R users — identical process as on macOS:
+
+```r
+# In R or RStudio:
+install.packages(c("usethis", "gitcreds"))
+usethis::create_github_token()  # Opens browser to create PAT
+gitcreds::gitcreds_set()        # Enter your PAT when prompted
+```
+
+**Option 2: Git CLI + Windows Credential Manager**
+
+Best for command-line Git users:
+
+```bash
+# Set the credential helper
+git config --global credential.helper manager-core
+```
+
+💡 This tells Git to use Git Credential Manager (GCM), which stores credentials securely in Windows Credential Manager.
+
+When you clone or push, you'll be asked for:
+
+- **Username**: `your_github_username`  
+- **Password**: `your_PAT_here`
+
+✅ Git will remember the token after this — no need to reenter.
+
+
+## Ready!
+
+You now have everything needed to build your academic website. 
+
+**What you have:**
+
+✅ Git - configured with GitHub authentication  
+✅ Hugo Extended - for building your site  
+✅ Text Editor - for editing content  
+
+Next: Clone the academic template and start customizing! 

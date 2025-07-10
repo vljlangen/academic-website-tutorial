@@ -1,0 +1,194 @@
+# Deploy to the Internet
+
+Time to make your website live! We'll use Netlify for free hosting that automatically updates when you push to GitHub.
+
+## Step 1: Sign Up for Netlify
+
+1. **Go to** [netlify.com](https://netlify.com)
+2. **Click** "Sign up"
+3. **Choose** "Sign up with GitHub" (easiest option)
+4. **Authorize** Netlify to access your GitHub
+
+## Step 2: Deploy Your Site
+
+1. **Click** "Add new site" → "Import an existing project"
+2. **Choose** "Deploy with GitHub"
+3. **Select** your repository (`my-academic-website`)
+4. **Keep default settings:**
+
+   - Build command: `hugo`
+   - Publish directory: `public`
+5. **Click** "Deploy site"
+
+Wait 2-3 minutes... **Your site is now live!**
+
+## Step 3: Get Your URL
+
+Netlify gives you a random URL like: `https://magical-unicorn-123456.netlify.app`
+
+**Your academic website is now online!** Share this URL with anyone.
+
+## Step 4: Get a Custom Domain (Optional)
+
+### Option 1: Free Netlify Subdomain
+
+1. **Go to** "Site settings" → "Change site name"
+2. **Enter**: `your-name-academic` (or whatever you prefer)
+3. **Your new URL**: `https://your-name-academic.netlify.app`
+
+### Option 2: Custom Domain (Recommended — not free, but just a small cost: ~$10–15/year)
+
+**Buy a domain** (about $10-15/year):
+- `yourname.com`
+- `drsmith.org` 
+- `janesmith.net`
+
+Popular domain registrars:
+- [Porkbun](https://porkbun.com) (recommended - great prices and interface)
+- [Namecheap](https://namecheap.com)
+- [Google Domains](https://domains.google)
+- [GoDaddy](https://godaddy.com)
+
+**Connect to Netlify:**
+
+1. **In Netlify**: Site settings → Domain management → Add custom domain
+2. **Follow instructions** to connect your domain
+3. **Netlify handles HTTPS** automatically (free SSL certificate)
+
+## Step 5: Automatic Updates
+
+Here's the magic: **Your website updates automatically!**
+
+```bash
+# Make changes locally
+# Edit your files in text editor
+
+# Push to GitHub
+git add .
+git commit -m "Added new publication"
+git push
+
+# Netlify automatically rebuilds and deploys
+# Your live site updates in 2-3 minutes
+```
+
+**Workflow:**
+
+Edit → Save → Commit → Push → **Live site updates automatically**
+
+## Step 6: Essential Netlify Features
+
+### Forms (Free Contact Forms)
+
+Add this to any page for a working contact form:
+
+```html
+<form name="contact" method="POST" data-netlify="true">
+  <input type="text" name="name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="message" placeholder="Your Message" required></textarea>
+  <button type="submit">Send</button>
+</form>
+```
+
+### Analytics
+
+- **Go to** Site settings → Analytics
+- **Enable** basic analytics to see visitor stats
+
+### Build & Deploy Settings
+
+- **Auto-deploy**: Every GitHub push triggers a rebuild
+- **Deploy previews**: See changes before they go live
+- **Branch deploys**: Test experimental features
+
+## Troubleshooting
+
+### Site Won't Build?
+
+Check the deploy log in Netlify:
+1. **Go to** Deploys tab
+2. **Click** the failed deploy
+3. **Read** the build log for errors
+
+**Common fixes:**
+
+- Make sure `hugo version` shows "extended"
+- Check for typos in your YAML files
+- Ensure all files are committed to GitHub
+
+### Site Loads but Looks Wrong?
+
+1. **Check** your `config/_default/config.yaml`
+2. **Update** `baseURL` to your actual Netlify URL:
+   ```yaml
+   baseURL: 'https://your-site-name.netlify.app'
+   ```
+3. **Commit and push** the change
+
+## Security & Performance
+
+Netlify automatically provides:
+
+- ✅ **HTTPS encryption** (free SSL certificate)
+- ✅ **Global CDN** (fast loading worldwide)
+- ✅ **DDoS protection**
+- ✅ **Edge compression**
+
+Your academic website is professional-grade!
+
+## What You've Accomplished
+
+🎉 **Congratulations!** You now have:
+
+✅ **Professional academic website** live on the internet  
+✅ **Custom domain** (optional but recommended)  
+✅ **Automatic updates** when you push to GitHub  
+✅ **Professional hosting** with HTTPS and global CDN  
+✅ **Contact forms** that work  
+✅ **Analytics** to track visitors  
+
+## Ongoing Workflow
+
+Your new routine for updating your website:
+
+```bash
+# 1. Make changes locally
+# Edit files, add publications, update bio, etc.
+
+# 2. Preview changes
+hugo server
+# Check http://localhost:1313
+
+# 3. Save and deploy
+git add .
+git commit -m "Updated CV and added new paper"
+git push
+
+# 4. Live site updates automatically in 2-3 minutes
+```
+
+## Next Steps for Your Academic Career
+
+**Share your website:**
+
+- Add URL to email signatures
+- Include in conference presentations
+- Put on business cards
+- Add to academic profiles (ORCID, ResearchGate)
+- Share on social media
+
+**Keep it updated:**
+
+- Add new publications immediately
+- Update your bio and photo annually
+- Post about research milestones
+- Share conference presentations
+
+---
+
+🚀 **Success!** You went from zero to professional academic website in under 30 minutes!
+
+💡 **Pro Tip**: Bookmark your Netlify dashboard - you'll use it to monitor deployments and site analytics.
+
+🌍 **Share your achievement**: Your academic website is now part of the global research community! 

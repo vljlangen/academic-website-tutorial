@@ -1,0 +1,124 @@
+# Save Your Work to GitHub
+
+Time to save your website and put it on GitHub so you can deploy it to the internet.
+
+## Step 1: Create Repository on GitHub
+
+1. **Click** the green "New" button on GitHub
+2. **Repository name**: `my-academic-website` (or whatever you prefer)
+3. **Make it Public** (required for free Netlify hosting)
+4. **Don't check** "Add a README" (you already have one)
+5. **Click** "Create repository"
+
+## Step 2: Connect Your Local Site to GitHub
+
+Copy the commands GitHub shows you, but here's what you'll run:
+
+```bash
+# Make sure you're in your website directory
+cd ~/websites/my-academic-site
+
+# Add your changes
+git add .
+git commit -m "My academic website setup"
+
+# Connect to your GitHub repository
+git remote add origin https://github.com/YOUR-USERNAME/my-academic-website.git
+
+# Push to GitHub
+git push -u origin main
+```
+
+**Replace** `YOUR-USERNAME` with your actual GitHub username.
+
+## Step 3: Basic Git Workflow
+
+Now you have a simple workflow for updating your website:
+
+```bash
+# After making changes to your site:
+
+# 1. Save all changes
+git add .
+
+# 2. Commit with a message
+git commit -m "Updated my bio and added new publication"
+
+# 3. Push to GitHub
+git push
+```
+
+**That's it!** Three commands to save and sync your website.
+
+## Common Git Commands
+
+Here are the only Git commands you need:
+
+```bash
+# See what's changed
+git status
+
+# Save changes locally
+git add .
+git commit -m "Description of what you changed"
+
+# Send to GitHub
+git push
+
+# Get latest from GitHub (if editing from multiple computers)
+git pull
+```
+
+## When Things Go Wrong
+
+**Can't push?** Try:
+```bash
+git pull origin main
+git push origin main
+```
+
+**Made a mistake?** Don't worry:
+
+- GitHub keeps all your old versions
+- You can always go back
+- Your local files are safe
+
+## Why GitHub?
+
+**For your website:**
+
+- **Free hosting** for your code
+- **Version history** - see all your changes
+- **Backup** - your site is safe in the cloud
+- **Required** for Netlify deployment
+
+**For your research:**
+
+- Share code and data
+- Collaborate with others
+- Professional presence
+- Industry standard
+
+## Check Your Work
+
+Your website code should now be visible at:
+
+`https://github.com/YOUR-USERNAME/my-academic-website`
+
+You should see all your files there, including:
+
+- `content/` folder with your profile
+- `config/` folder with settings
+- All the template files
+
+## Next Step
+
+Perfect! Your website is now saved on GitHub. 
+
+In the next chapter, we'll deploy it to the internet so anyone can visit your professional academic website.
+
+---
+
+💡 **Pro Tip**: Use descriptive commit messages like "Added new paper" or "Updated bio" - you'll thank yourself later!
+
+🔒 **Remember**: Your repository is public, so don't commit sensitive information like personal documents or passwords. 

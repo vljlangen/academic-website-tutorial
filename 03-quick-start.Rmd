@@ -1,0 +1,220 @@
+# Clone Template & Start Customizing
+
+Time to get your actual website! We'll clone the proven academic template and start customizing it immediately.
+
+## Step 1: Get the Template (5 minutes)
+
+### Clone the Academic CV Template
+
+Open your terminal and run:
+
+```bash
+# Create a websites folder
+mkdir ~/websites
+cd ~/websites
+
+# Clone the academic template
+git clone https://github.com/HugoBlox/theme-academic-cv.git my-academic-site
+
+# Go into your new site
+cd my-academic-site
+
+# Remove the original git history
+rm -rf .git
+
+# Make it your own repository
+git init
+```
+
+### Launch Your Site
+
+```bash
+# Start the development server
+hugo server
+
+# Open http://localhost:1313 in your browser
+```
+
+**Congratulations!** You have a professional academic website running locally.
+
+## Step 2: Add Your Information (10 minutes)
+
+Keep `hugo server` running and make changes. Your browser will update automatically.
+
+### Update Your Profile
+
+Edit `content/authors/admin/_index.md` in your text editor:
+
+```yaml
+---
+title: Dr. Your Name
+
+role: Professor of Computer Science
+
+organizations:
+  - name: Your University
+    url: "https://your-university.edu/"
+
+bio: My research interests include artificial intelligence, machine learning, and computational biology.
+
+interests:
+  - Artificial Intelligence
+  - Machine Learning
+  - Your Research Area
+
+education:
+  courses:
+    - course: PhD in Computer Science
+      institution: Your University
+      year: 2015
+    - course: MS in Computer Science
+      institution: Another University
+      year: 2010
+
+social:
+  - icon: envelope
+    icon_pack: fas
+    link: 'mailto:you@university.edu'
+  - icon: twitter
+    icon_pack: fab
+    link: https://twitter.com/yourusername
+  - icon: google-scholar
+    icon_pack: ai
+    link: https://scholar.google.com/citations?user=YOUR-ID
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/yourusername
+  - icon: orcid
+    icon_pack: fab
+    link: https://orcid.org/0000-0000-0000-0000
+
+highlight_name: true
+---
+
+Write a brief bio about yourself here. This appears on your homepage.
+
+Your research focus, current position, and key achievements. Keep it concise but informative.
+```
+
+**Save the file** → Check your browser → See instant changes!
+
+### Add Your Photo
+
+1. **Save your professional headshot** as `content/authors/admin/avatar.jpg`
+2. **Recommended**: 500x500 pixels, under 1MB
+3. **Refresh browser** to see your photo
+
+### Update Site Settings
+
+Edit `config/_default/config.yaml`:
+
+```yaml
+title: 'Dr. Your Name - Academic Website'
+baseURL: 'https://your-name.netlify.app'  # We'll set this up later
+```
+
+## Step 3: Explore and Customize
+
+Your site has these main sections. Explore them by clicking around:
+
+**Main Sections:**
+
+- **Home**: Your bio and highlights
+- **Publications**: Research papers (example content now)
+- **Projects**: Research projects  
+- **Teaching**: Course information
+- **Contact**: Your contact details
+
+### Quick Wins
+
+**Remove demo content**: Delete any example files in:
+
+- `content/publication/` (keep the `_index.md` file)
+- `content/project/` (keep the `_index.md` file)
+
+**Add your CV**: 
+
+1. Save your CV as `static/uploads/cv.pdf`
+2. It's now available at `http://localhost:1313/uploads/cv.pdf`
+
+### Customize Homepage Widgets
+
+Edit `content/_index.md` to show/hide sections:
+
+```yaml
+# To hide a section, add: 
+demo: false
+
+# To show a section, remove the demo line or set:
+demo: true
+```
+
+## Step 4: Essential File Structure
+
+Here's what you're working with:
+
+```
+my-academic-site/
+├── content/
+│   ├── authors/admin/           # Your profile
+│   ├── publication/             # Your papers
+│   ├── project/                 # Your research
+│   └── _index.md               # Homepage layout
+├── static/uploads/              # CV, PDFs, files
+├── config/_default/             # Site settings
+└── hugo.toml                   # Main config
+```
+
+**Key principle**: 
+
+- Content goes in `content/`
+- Files (PDFs, images) go in `static/`
+- Settings go in `config/`
+
+## Step 5: Keep Experimenting
+
+With `hugo server` running:
+
+1. **Edit any file** → **Save** → **Check browser**
+2. **Try different settings** in your profile
+3. **Add content** to different sections
+4. **Upload files** to `static/uploads/`
+
+### Common Workflow:
+
+```bash
+# Start server (always)
+hugo server
+
+# Edit files in your text editor
+# Save changes
+# Check browser (auto-refreshes)
+# Repeat
+```
+
+### Stop Server:
+
+Press `Ctrl+C` in terminal when done.
+
+## What You Have Now
+
+✅ **Professional academic website** running locally  
+✅ **Your information** and photo  
+✅ **Understanding** of basic structure  
+✅ **Live preview** with instant updates  
+
+## Next Steps
+
+Your website looks great locally. Now let's:
+
+1. **Save your work** to GitHub
+2. **Deploy it** to the internet
+3. **Get a custom domain**
+
+Keep `hugo server` running as you work - it's your best friend for seeing changes instantly!
+
+---
+
+💡 **Pro Tip**: The academic template is already perfectly configured. Focus on content, not settings!
+
+🎯 **Goal**: You now have a working academic website that updates in real-time as you edit! 

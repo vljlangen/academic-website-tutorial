@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Clone Template &amp; Start Customizing | How to Build a Zero-Cost Academic Homepage Using Open-Source Tools</title>
+  <meta name="description" content="The fastest way to create a professional academic website using Hugo and HugoBlox Academic CV template. Go from zero to live website in under 30 minutes." />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Clone Template &amp; Start Customizing | How to Build a Zero-Cost Academic Homepage Using Open-Source Tools" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="The fastest way to create a professional academic website using Hugo and HugoBlox Academic CV template. Go from zero to live website in under 30 minutes." />
+  <meta name="github-repo" content="yourusername/academic-website-tutorial" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Clone Template &amp; Start Customizing | How to Build a Zero-Cost Academic Homepage Using Open-Source Tools" />
+  
+  <meta name="twitter:description" content="The fastest way to create a professional academic website using Hugo and HugoBlox Academic CV template. Go from zero to live website in under 30 minutes." />
+  
+
+<meta name="author" content="Ville Langén" />
+
+
+<meta name="date" content="2025-07-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="essential-setup.html"/>
+<link rel="next" href="save-your-work-to-github.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Academic Website Tutorial</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#our-approach"><i class="fa fa-check"></i>Our Approach</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-youll-build"><i class="fa fa-check"></i>What You’ll Build</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-guide"><i class="fa fa-check"></i>The Guide</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html"><i class="fa fa-check"></i><b>1</b> Academic Website in 30 Minutes</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html#why-this-approach"><i class="fa fa-check"></i><b>1.1</b> Why This Approach?</a></li>
+<li class="chapter" data-level="1.2" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html#what-youll-learn"><i class="fa fa-check"></i><b>1.2</b> What You’ll Learn</a></li>
+<li class="chapter" data-level="1.3" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html#prerequisites"><i class="fa fa-check"></i><b>1.3</b> Prerequisites</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="essential-setup.html"><a href="essential-setup.html"><i class="fa fa-check"></i><b>2</b> Essential Setup</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="essential-setup.html"><a href="essential-setup.html#step-1-install-git"><i class="fa fa-check"></i><b>2.1</b> Step 1: Install Git</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="essential-setup.html"><a href="essential-setup.html#macos"><i class="fa fa-check"></i><b>2.1.1</b> macOS</a></li>
+<li class="chapter" data-level="2.1.2" data-path="essential-setup.html"><a href="essential-setup.html#windows"><i class="fa fa-check"></i><b>2.1.2</b> Windows</a></li>
+<li class="chapter" data-level="2.1.3" data-path="essential-setup.html"><a href="essential-setup.html#linux-ubuntudebian"><i class="fa fa-check"></i><b>2.1.3</b> Linux (Ubuntu/Debian)</a></li>
+<li class="chapter" data-level="2.1.4" data-path="essential-setup.html"><a href="essential-setup.html#verify-git-installation"><i class="fa fa-check"></i><b>2.1.4</b> Verify Git Installation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="essential-setup.html"><a href="essential-setup.html#step-2-install-hugo-extended"><i class="fa fa-check"></i><b>2.2</b> Step 2: Install Hugo Extended</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="essential-setup.html"><a href="essential-setup.html#macos-1"><i class="fa fa-check"></i><b>2.2.1</b> macOS</a></li>
+<li class="chapter" data-level="2.2.2" data-path="essential-setup.html"><a href="essential-setup.html#windows-1"><i class="fa fa-check"></i><b>2.2.2</b> Windows</a></li>
+<li class="chapter" data-level="2.2.3" data-path="essential-setup.html"><a href="essential-setup.html#linux-ubuntudebian-1"><i class="fa fa-check"></i><b>2.2.3</b> Linux (Ubuntu/Debian)</a></li>
+<li class="chapter" data-level="2.2.4" data-path="essential-setup.html"><a href="essential-setup.html#verify-hugo-installation"><i class="fa fa-check"></i><b>2.2.4</b> Verify Hugo Installation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="essential-setup.html"><a href="essential-setup.html#step-3-choose-your-editor"><i class="fa fa-check"></i><b>2.3</b> Step 3: Choose Your Editor</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="essential-setup.html"><a href="essential-setup.html#vs-code-recommended-for-beginners"><i class="fa fa-check"></i><b>2.3.1</b> VS Code (Recommended for Beginners)</a></li>
+<li class="chapter" data-level="2.3.2" data-path="essential-setup.html"><a href="essential-setup.html#cursor-ai-ai-powered-coding"><i class="fa fa-check"></i><b>2.3.2</b> Cursor AI (AI-Powered Coding)</a></li>
+<li class="chapter" data-level="2.3.3" data-path="essential-setup.html"><a href="essential-setup.html#rstudio-if-you-use-r"><i class="fa fa-check"></i><b>2.3.3</b> RStudio (If You Use R)</a></li>
+<li class="chapter" data-level="2.3.4" data-path="essential-setup.html"><a href="essential-setup.html#quick-vs-code-setup"><i class="fa fa-check"></i><b>2.3.4</b> Quick VS Code Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="essential-setup.html"><a href="essential-setup.html#step-4-git-configuration-authentication"><i class="fa fa-check"></i><b>2.4</b> Step 4: Git Configuration &amp; Authentication</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="essential-setup.html"><a href="essential-setup.html#basic-identity-setup"><i class="fa fa-check"></i><b>2.4.1</b> Basic Identity Setup</a></li>
+<li class="chapter" data-level="2.4.2" data-path="essential-setup.html"><a href="essential-setup.html#github-account-setup"><i class="fa fa-check"></i><b>2.4.2</b> GitHub Account Setup</a></li>
+<li class="chapter" data-level="2.4.3" data-path="essential-setup.html"><a href="essential-setup.html#github-authentication-required"><i class="fa fa-check"></i><b>2.4.3</b> GitHub Authentication (Required)</a></li>
+<li class="chapter" data-level="2.4.4" data-path="essential-setup.html"><a href="essential-setup.html#macos-authentication-setup"><i class="fa fa-check"></i><b>2.4.4</b> macOS Authentication Setup</a></li>
+<li class="chapter" data-level="2.4.5" data-path="essential-setup.html"><a href="essential-setup.html#windows-authentication-setup"><i class="fa fa-check"></i><b>2.4.5</b> Windows Authentication Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="essential-setup.html"><a href="essential-setup.html#ready"><i class="fa fa-check"></i><b>2.5</b> Ready!</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html"><i class="fa fa-check"></i><b>3</b> Clone Template &amp; Start Customizing</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#step-1-get-the-template-5-minutes"><i class="fa fa-check"></i><b>3.1</b> Step 1: Get the Template (5 minutes)</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#clone-the-academic-cv-template"><i class="fa fa-check"></i><b>3.1.1</b> Clone the Academic CV Template</a></li>
+<li class="chapter" data-level="3.1.2" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#launch-your-site"><i class="fa fa-check"></i><b>3.1.2</b> Launch Your Site</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#step-2-add-your-information-10-minutes"><i class="fa fa-check"></i><b>3.2</b> Step 2: Add Your Information (10 minutes)</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#update-your-profile"><i class="fa fa-check"></i><b>3.2.1</b> Update Your Profile</a></li>
+<li class="chapter" data-level="3.2.2" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#add-your-photo"><i class="fa fa-check"></i><b>3.2.2</b> Add Your Photo</a></li>
+<li class="chapter" data-level="3.2.3" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#update-site-settings"><i class="fa fa-check"></i><b>3.2.3</b> Update Site Settings</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#step-3-explore-and-customize"><i class="fa fa-check"></i><b>3.3</b> Step 3: Explore and Customize</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#quick-wins"><i class="fa fa-check"></i><b>3.3.1</b> Quick Wins</a></li>
+<li class="chapter" data-level="3.3.2" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#customize-homepage-widgets"><i class="fa fa-check"></i><b>3.3.2</b> Customize Homepage Widgets</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#step-4-essential-file-structure"><i class="fa fa-check"></i><b>3.4</b> Step 4: Essential File Structure</a></li>
+<li class="chapter" data-level="3.5" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#step-5-keep-experimenting"><i class="fa fa-check"></i><b>3.5</b> Step 5: Keep Experimenting</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#common-workflow"><i class="fa fa-check"></i><b>3.5.1</b> Common Workflow:</a></li>
+<li class="chapter" data-level="3.5.2" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#stop-server"><i class="fa fa-check"></i><b>3.5.2</b> Stop Server:</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#what-you-have-now"><i class="fa fa-check"></i><b>3.6</b> What You Have Now</a></li>
+<li class="chapter" data-level="3.7" data-path="clone-template-start-customizing.html"><a href="clone-template-start-customizing.html#next-steps"><i class="fa fa-check"></i><b>3.7</b> Next Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html"><i class="fa fa-check"></i><b>4</b> Save Your Work to GitHub</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#step-1-create-repository-on-github"><i class="fa fa-check"></i><b>4.1</b> Step 1: Create Repository on GitHub</a></li>
+<li class="chapter" data-level="4.2" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#step-2-connect-your-local-site-to-github"><i class="fa fa-check"></i><b>4.2</b> Step 2: Connect Your Local Site to GitHub</a></li>
+<li class="chapter" data-level="4.3" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#step-3-basic-git-workflow"><i class="fa fa-check"></i><b>4.3</b> Step 3: Basic Git Workflow</a></li>
+<li class="chapter" data-level="4.4" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#common-git-commands"><i class="fa fa-check"></i><b>4.4</b> Common Git Commands</a></li>
+<li class="chapter" data-level="4.5" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#when-things-go-wrong"><i class="fa fa-check"></i><b>4.5</b> When Things Go Wrong</a></li>
+<li class="chapter" data-level="4.6" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#why-github"><i class="fa fa-check"></i><b>4.6</b> Why GitHub?</a></li>
+<li class="chapter" data-level="4.7" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#check-your-work"><i class="fa fa-check"></i><b>4.7</b> Check Your Work</a></li>
+<li class="chapter" data-level="4.8" data-path="save-your-work-to-github.html"><a href="save-your-work-to-github.html#next-step"><i class="fa fa-check"></i><b>4.8</b> Next Step</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html"><i class="fa fa-check"></i><b>5</b> Deploy to the Internet</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#step-1-sign-up-for-netlify"><i class="fa fa-check"></i><b>5.1</b> Step 1: Sign Up for Netlify</a></li>
+<li class="chapter" data-level="5.2" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#step-2-deploy-your-site"><i class="fa fa-check"></i><b>5.2</b> Step 2: Deploy Your Site</a></li>
+<li class="chapter" data-level="5.3" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#step-3-get-your-url"><i class="fa fa-check"></i><b>5.3</b> Step 3: Get Your URL</a></li>
+<li class="chapter" data-level="5.4" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#step-4-get-a-custom-domain-optional"><i class="fa fa-check"></i><b>5.4</b> Step 4: Get a Custom Domain (Optional)</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#option-1-free-netlify-subdomain"><i class="fa fa-check"></i><b>5.4.1</b> Option 1: Free Netlify Subdomain</a></li>
+<li class="chapter" data-level="5.4.2" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#option-2-custom-domain-recommended-not-free-but-just-a-small-cost-1015year"><i class="fa fa-check"></i><b>5.4.2</b> Option 2: Custom Domain (Recommended — not free, but just a small cost: ~$10–15/year)</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#step-5-automatic-updates"><i class="fa fa-check"></i><b>5.5</b> Step 5: Automatic Updates</a></li>
+<li class="chapter" data-level="5.6" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#step-6-essential-netlify-features"><i class="fa fa-check"></i><b>5.6</b> Step 6: Essential Netlify Features</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#forms-free-contact-forms"><i class="fa fa-check"></i><b>5.6.1</b> Forms (Free Contact Forms)</a></li>
+<li class="chapter" data-level="5.6.2" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#analytics"><i class="fa fa-check"></i><b>5.6.2</b> Analytics</a></li>
+<li class="chapter" data-level="5.6.3" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#build-deploy-settings"><i class="fa fa-check"></i><b>5.6.3</b> Build &amp; Deploy Settings</a></li>
+</ul></li>
+<li class="chapter" data-level="5.7" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#troubleshooting"><i class="fa fa-check"></i><b>5.7</b> Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#site-wont-build"><i class="fa fa-check"></i><b>5.7.1</b> Site Won’t Build?</a></li>
+<li class="chapter" data-level="5.7.2" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#site-loads-but-looks-wrong"><i class="fa fa-check"></i><b>5.7.2</b> Site Loads but Looks Wrong?</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#security-performance"><i class="fa fa-check"></i><b>5.8</b> Security &amp; Performance</a></li>
+<li class="chapter" data-level="5.9" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#what-youve-accomplished"><i class="fa fa-check"></i><b>5.9</b> What You’ve Accomplished</a></li>
+<li class="chapter" data-level="5.10" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#ongoing-workflow"><i class="fa fa-check"></i><b>5.10</b> Ongoing Workflow</a></li>
+<li class="chapter" data-level="5.11" data-path="deploy-to-the-internet.html"><a href="deploy-to-the-internet.html#next-steps-for-your-academic-career"><i class="fa fa-check"></i><b>5.11</b> Next Steps for Your Academic Career</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">How to Build a Zero-Cost Academic Homepage Using Open-Source Tools</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="clone-template-start-customizing" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Clone Template &amp; Start Customizing<a href="clone-template-start-customizing.html#clone-template-start-customizing" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Time to get your actual website! We’ll clone the proven academic template and start customizing it immediately.</p>
+<div id="step-1-get-the-template-5-minutes" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Step 1: Get the Template (5 minutes)<a href="clone-template-start-customizing.html#step-1-get-the-template-5-minutes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="clone-the-academic-cv-template" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Clone the Academic CV Template<a href="clone-template-start-customizing.html#clone-the-academic-cv-template" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Open your terminal and run:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="clone-template-start-customizing.html#cb12-1" tabindex="-1"></a><span class="co"># Create a websites folder</span></span>
+<span id="cb12-2"><a href="clone-template-start-customizing.html#cb12-2" tabindex="-1"></a><span class="fu">mkdir</span> ~/websites</span>
+<span id="cb12-3"><a href="clone-template-start-customizing.html#cb12-3" tabindex="-1"></a><span class="bu">cd</span> ~/websites</span>
+<span id="cb12-4"><a href="clone-template-start-customizing.html#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="clone-template-start-customizing.html#cb12-5" tabindex="-1"></a><span class="co"># Clone the academic template</span></span>
+<span id="cb12-6"><a href="clone-template-start-customizing.html#cb12-6" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/HugoBlox/theme-academic-cv.git my-academic-site</span>
+<span id="cb12-7"><a href="clone-template-start-customizing.html#cb12-7" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="clone-template-start-customizing.html#cb12-8" tabindex="-1"></a><span class="co"># Go into your new site</span></span>
+<span id="cb12-9"><a href="clone-template-start-customizing.html#cb12-9" tabindex="-1"></a><span class="bu">cd</span> my-academic-site</span>
+<span id="cb12-10"><a href="clone-template-start-customizing.html#cb12-10" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="clone-template-start-customizing.html#cb12-11" tabindex="-1"></a><span class="co"># Remove the original git history</span></span>
+<span id="cb12-12"><a href="clone-template-start-customizing.html#cb12-12" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> .git</span>
+<span id="cb12-13"><a href="clone-template-start-customizing.html#cb12-13" tabindex="-1"></a></span>
+<span id="cb12-14"><a href="clone-template-start-customizing.html#cb12-14" tabindex="-1"></a><span class="co"># Make it your own repository</span></span>
+<span id="cb12-15"><a href="clone-template-start-customizing.html#cb12-15" tabindex="-1"></a><span class="fu">git</span> init</span></code></pre></div>
+</div>
+<div id="launch-your-site" class="section level3 hasAnchor" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Launch Your Site<a href="clone-template-start-customizing.html#launch-your-site" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="clone-template-start-customizing.html#cb13-1" tabindex="-1"></a><span class="co"># Start the development server</span></span>
+<span id="cb13-2"><a href="clone-template-start-customizing.html#cb13-2" tabindex="-1"></a><span class="ex">hugo</span> server</span>
+<span id="cb13-3"><a href="clone-template-start-customizing.html#cb13-3" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="clone-template-start-customizing.html#cb13-4" tabindex="-1"></a><span class="co"># Open http://localhost:1313 in your browser</span></span></code></pre></div>
+<p><strong>Congratulations!</strong> You have a professional academic website running locally.</p>
+</div>
+</div>
+<div id="step-2-add-your-information-10-minutes" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Step 2: Add Your Information (10 minutes)<a href="clone-template-start-customizing.html#step-2-add-your-information-10-minutes" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Keep <code>hugo server</code> running and make changes. Your browser will update automatically.</p>
+<div id="update-your-profile" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Update Your Profile<a href="clone-template-start-customizing.html#update-your-profile" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Edit <code>content/authors/admin/_index.md</code> in your text editor:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb14-1"><a href="clone-template-start-customizing.html#cb14-1" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb14-2"><a href="clone-template-start-customizing.html#cb14-2" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> Dr. Your Name</span></span>
+<span id="cb14-3"><a href="clone-template-start-customizing.html#cb14-3" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="clone-template-start-customizing.html#cb14-4" tabindex="-1"></a><span class="fu">role</span><span class="kw">:</span><span class="at"> Professor of Computer Science</span></span>
+<span id="cb14-5"><a href="clone-template-start-customizing.html#cb14-5" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="clone-template-start-customizing.html#cb14-6" tabindex="-1"></a><span class="fu">organizations</span><span class="kw">:</span></span>
+<span id="cb14-7"><a href="clone-template-start-customizing.html#cb14-7" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Your University</span></span>
+<span id="cb14-8"><a href="clone-template-start-customizing.html#cb14-8" tabindex="-1"></a><span class="at">    </span><span class="fu">url</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;https://your-university.edu/&quot;</span></span>
+<span id="cb14-9"><a href="clone-template-start-customizing.html#cb14-9" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="clone-template-start-customizing.html#cb14-10" tabindex="-1"></a><span class="fu">bio</span><span class="kw">:</span><span class="at"> My research interests include artificial intelligence, machine learning, and computational biology.</span></span>
+<span id="cb14-11"><a href="clone-template-start-customizing.html#cb14-11" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="clone-template-start-customizing.html#cb14-12" tabindex="-1"></a><span class="fu">interests</span><span class="kw">:</span></span>
+<span id="cb14-13"><a href="clone-template-start-customizing.html#cb14-13" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Artificial Intelligence</span></span>
+<span id="cb14-14"><a href="clone-template-start-customizing.html#cb14-14" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Machine Learning</span></span>
+<span id="cb14-15"><a href="clone-template-start-customizing.html#cb14-15" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Your Research Area</span></span>
+<span id="cb14-16"><a href="clone-template-start-customizing.html#cb14-16" tabindex="-1"></a></span>
+<span id="cb14-17"><a href="clone-template-start-customizing.html#cb14-17" tabindex="-1"></a><span class="fu">education</span><span class="kw">:</span></span>
+<span id="cb14-18"><a href="clone-template-start-customizing.html#cb14-18" tabindex="-1"></a><span class="at">  </span><span class="fu">courses</span><span class="kw">:</span></span>
+<span id="cb14-19"><a href="clone-template-start-customizing.html#cb14-19" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">course</span><span class="kw">:</span><span class="at"> PhD in Computer Science</span></span>
+<span id="cb14-20"><a href="clone-template-start-customizing.html#cb14-20" tabindex="-1"></a><span class="at">      </span><span class="fu">institution</span><span class="kw">:</span><span class="at"> Your University</span></span>
+<span id="cb14-21"><a href="clone-template-start-customizing.html#cb14-21" tabindex="-1"></a><span class="at">      </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2015</span></span>
+<span id="cb14-22"><a href="clone-template-start-customizing.html#cb14-22" tabindex="-1"></a><span class="at">    </span><span class="kw">-</span><span class="at"> </span><span class="fu">course</span><span class="kw">:</span><span class="at"> MS in Computer Science</span></span>
+<span id="cb14-23"><a href="clone-template-start-customizing.html#cb14-23" tabindex="-1"></a><span class="at">      </span><span class="fu">institution</span><span class="kw">:</span><span class="at"> Another University</span></span>
+<span id="cb14-24"><a href="clone-template-start-customizing.html#cb14-24" tabindex="-1"></a><span class="at">      </span><span class="fu">year</span><span class="kw">:</span><span class="at"> </span><span class="dv">2010</span></span>
+<span id="cb14-25"><a href="clone-template-start-customizing.html#cb14-25" tabindex="-1"></a></span>
+<span id="cb14-26"><a href="clone-template-start-customizing.html#cb14-26" tabindex="-1"></a><span class="fu">social</span><span class="kw">:</span></span>
+<span id="cb14-27"><a href="clone-template-start-customizing.html#cb14-27" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> envelope</span></span>
+<span id="cb14-28"><a href="clone-template-start-customizing.html#cb14-28" tabindex="-1"></a><span class="at">    </span><span class="fu">icon_pack</span><span class="kw">:</span><span class="at"> fas</span></span>
+<span id="cb14-29"><a href="clone-template-start-customizing.html#cb14-29" tabindex="-1"></a><span class="at">    </span><span class="fu">link</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;mailto:you@university.edu&#39;</span></span>
+<span id="cb14-30"><a href="clone-template-start-customizing.html#cb14-30" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> twitter</span></span>
+<span id="cb14-31"><a href="clone-template-start-customizing.html#cb14-31" tabindex="-1"></a><span class="at">    </span><span class="fu">icon_pack</span><span class="kw">:</span><span class="at"> fab</span></span>
+<span id="cb14-32"><a href="clone-template-start-customizing.html#cb14-32" tabindex="-1"></a><span class="at">    </span><span class="fu">link</span><span class="kw">:</span><span class="at"> https://twitter.com/yourusername</span></span>
+<span id="cb14-33"><a href="clone-template-start-customizing.html#cb14-33" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> google-scholar</span></span>
+<span id="cb14-34"><a href="clone-template-start-customizing.html#cb14-34" tabindex="-1"></a><span class="at">    </span><span class="fu">icon_pack</span><span class="kw">:</span><span class="at"> ai</span></span>
+<span id="cb14-35"><a href="clone-template-start-customizing.html#cb14-35" tabindex="-1"></a><span class="at">    </span><span class="fu">link</span><span class="kw">:</span><span class="at"> https://scholar.google.com/citations?user=YOUR-ID</span></span>
+<span id="cb14-36"><a href="clone-template-start-customizing.html#cb14-36" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> github</span></span>
+<span id="cb14-37"><a href="clone-template-start-customizing.html#cb14-37" tabindex="-1"></a><span class="at">    </span><span class="fu">icon_pack</span><span class="kw">:</span><span class="at"> fab</span></span>
+<span id="cb14-38"><a href="clone-template-start-customizing.html#cb14-38" tabindex="-1"></a><span class="at">    </span><span class="fu">link</span><span class="kw">:</span><span class="at"> https://github.com/yourusername</span></span>
+<span id="cb14-39"><a href="clone-template-start-customizing.html#cb14-39" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> </span><span class="fu">icon</span><span class="kw">:</span><span class="at"> orcid</span></span>
+<span id="cb14-40"><a href="clone-template-start-customizing.html#cb14-40" tabindex="-1"></a><span class="at">    </span><span class="fu">icon_pack</span><span class="kw">:</span><span class="at"> fab</span></span>
+<span id="cb14-41"><a href="clone-template-start-customizing.html#cb14-41" tabindex="-1"></a><span class="at">    </span><span class="fu">link</span><span class="kw">:</span><span class="at"> https://orcid.org/0000-0000-0000-0000</span></span>
+<span id="cb14-42"><a href="clone-template-start-customizing.html#cb14-42" tabindex="-1"></a></span>
+<span id="cb14-43"><a href="clone-template-start-customizing.html#cb14-43" tabindex="-1"></a><span class="fu">highlight_name</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb14-44"><a href="clone-template-start-customizing.html#cb14-44" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb14-45"><a href="clone-template-start-customizing.html#cb14-45" tabindex="-1"></a></span>
+<span id="cb14-46"><a href="clone-template-start-customizing.html#cb14-46" tabindex="-1"></a><span class="at">Write a brief bio about yourself here. This appears on your homepage.</span></span>
+<span id="cb14-47"><a href="clone-template-start-customizing.html#cb14-47" tabindex="-1"></a></span>
+<span id="cb14-48"><a href="clone-template-start-customizing.html#cb14-48" tabindex="-1"></a><span class="at">Your research focus, current position, and key achievements. Keep it concise but informative.</span></span></code></pre></div>
+<p><strong>Save the file</strong> → Check your browser → See instant changes!</p>
+</div>
+<div id="add-your-photo" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Add Your Photo<a href="clone-template-start-customizing.html#add-your-photo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><strong>Save your professional headshot</strong> as <code>content/authors/admin/avatar.jpg</code></li>
+<li><strong>Recommended</strong>: 500x500 pixels, under 1MB</li>
+<li><strong>Refresh browser</strong> to see your photo</li>
+</ol>
+</div>
+<div id="update-site-settings" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Update Site Settings<a href="clone-template-start-customizing.html#update-site-settings" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Edit <code>config/_default/config.yaml</code>:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb15-1"><a href="clone-template-start-customizing.html#cb15-1" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;Dr. Your Name - Academic Website&#39;</span></span>
+<span id="cb15-2"><a href="clone-template-start-customizing.html#cb15-2" tabindex="-1"></a><span class="fu">baseURL</span><span class="kw">:</span><span class="at"> </span><span class="st">&#39;https://your-name.netlify.app&#39;</span><span class="co">  # We&#39;ll set this up later</span></span></code></pre></div>
+</div>
+</div>
+<div id="step-3-explore-and-customize" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Step 3: Explore and Customize<a href="clone-template-start-customizing.html#step-3-explore-and-customize" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Your site has these main sections. Explore them by clicking around:</p>
+<p><strong>Main Sections:</strong></p>
+<ul>
+<li><strong>Home</strong>: Your bio and highlights</li>
+<li><strong>Publications</strong>: Research papers (example content now)</li>
+<li><strong>Projects</strong>: Research projects<br />
+</li>
+<li><strong>Teaching</strong>: Course information</li>
+<li><strong>Contact</strong>: Your contact details</li>
+</ul>
+<div id="quick-wins" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Quick Wins<a href="clone-template-start-customizing.html#quick-wins" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Remove demo content</strong>: Delete any example files in:</p>
+<ul>
+<li><code>content/publication/</code> (keep the <code>_index.md</code> file)</li>
+<li><code>content/project/</code> (keep the <code>_index.md</code> file)</li>
+</ul>
+<p><strong>Add your CV</strong>:</p>
+<ol style="list-style-type: decimal">
+<li>Save your CV as <code>static/uploads/cv.pdf</code></li>
+<li>It’s now available at <code>http://localhost:1313/uploads/cv.pdf</code></li>
+</ol>
+</div>
+<div id="customize-homepage-widgets" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Customize Homepage Widgets<a href="clone-template-start-customizing.html#customize-homepage-widgets" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Edit <code>content/_index.md</code> to show/hide sections:</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb16-1"><a href="clone-template-start-customizing.html#cb16-1" tabindex="-1"></a><span class="co"># To hide a section, add: </span></span>
+<span id="cb16-2"><a href="clone-template-start-customizing.html#cb16-2" tabindex="-1"></a><span class="fu">demo</span><span class="kw">:</span><span class="at"> </span><span class="ch">false</span></span>
+<span id="cb16-3"><a href="clone-template-start-customizing.html#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="clone-template-start-customizing.html#cb16-4" tabindex="-1"></a><span class="co"># To show a section, remove the demo line or set:</span></span>
+<span id="cb16-5"><a href="clone-template-start-customizing.html#cb16-5" tabindex="-1"></a><span class="fu">demo</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div>
+</div>
+</div>
+<div id="step-4-essential-file-structure" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Step 4: Essential File Structure<a href="clone-template-start-customizing.html#step-4-essential-file-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here’s what you’re working with:</p>
+<pre><code>my-academic-site/
+├── content/
+│   ├── authors/admin/           # Your profile
+│   ├── publication/             # Your papers
+│   ├── project/                 # Your research
+│   └── _index.md               # Homepage layout
+├── static/uploads/              # CV, PDFs, files
+├── config/_default/             # Site settings
+└── hugo.toml                   # Main config</code></pre>
+<p><strong>Key principle</strong>:</p>
+<ul>
+<li>Content goes in <code>content/</code></li>
+<li>Files (PDFs, images) go in <code>static/</code></li>
+<li>Settings go in <code>config/</code></li>
+</ul>
+</div>
+<div id="step-5-keep-experimenting" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Step 5: Keep Experimenting<a href="clone-template-start-customizing.html#step-5-keep-experimenting" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>With <code>hugo server</code> running:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Edit any file</strong> → <strong>Save</strong> → <strong>Check browser</strong></li>
+<li><strong>Try different settings</strong> in your profile</li>
+<li><strong>Add content</strong> to different sections</li>
+<li><strong>Upload files</strong> to <code>static/uploads/</code></li>
+</ol>
+<div id="common-workflow" class="section level3 hasAnchor" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> Common Workflow:<a href="clone-template-start-customizing.html#common-workflow" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb18-1"><a href="clone-template-start-customizing.html#cb18-1" tabindex="-1"></a><span class="co"># Start server (always)</span></span>
+<span id="cb18-2"><a href="clone-template-start-customizing.html#cb18-2" tabindex="-1"></a><span class="ex">hugo</span> server</span>
+<span id="cb18-3"><a href="clone-template-start-customizing.html#cb18-3" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="clone-template-start-customizing.html#cb18-4" tabindex="-1"></a><span class="co"># Edit files in your text editor</span></span>
+<span id="cb18-5"><a href="clone-template-start-customizing.html#cb18-5" tabindex="-1"></a><span class="co"># Save changes</span></span>
+<span id="cb18-6"><a href="clone-template-start-customizing.html#cb18-6" tabindex="-1"></a><span class="co"># Check browser (auto-refreshes)</span></span>
+<span id="cb18-7"><a href="clone-template-start-customizing.html#cb18-7" tabindex="-1"></a><span class="co"># Repeat</span></span></code></pre></div>
+</div>
+<div id="stop-server" class="section level3 hasAnchor" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Stop Server:<a href="clone-template-start-customizing.html#stop-server" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Press <code>Ctrl+C</code> in terminal when done.</p>
+</div>
+</div>
+<div id="what-you-have-now" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> What You Have Now<a href="clone-template-start-customizing.html#what-you-have-now" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>✅ <strong>Professional academic website</strong> running locally<br />
+✅ <strong>Your information</strong> and photo<br />
+✅ <strong>Understanding</strong> of basic structure<br />
+✅ <strong>Live preview</strong> with instant updates</p>
+</div>
+<div id="next-steps" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Next Steps<a href="clone-template-start-customizing.html#next-steps" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Your website looks great locally. Now let’s:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Save your work</strong> to GitHub</li>
+<li><strong>Deploy it</strong> to the internet</li>
+<li><strong>Get a custom domain</strong></li>
+</ol>
+<p>Keep <code>hugo server</code> running as you work - it’s your best friend for seeing changes instantly!</p>
+<hr />
+<p>💡 <strong>Pro Tip</strong>: The academic template is already perfectly configured. Focus on content, not settings!</p>
+<p>🎯 <strong>Goal</strong>: You now have a working academic website that updates in real-time as you edit!</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="essential-setup.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="save-your-work-to-github.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/yourusername/academic-website-tutorial/edit/main/03-quick-start.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["academic-website-quick-start.pdf", "academic-website-quick-start.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>
