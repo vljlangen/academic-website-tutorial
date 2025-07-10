@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# RStudio
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# R
+.httr-oauth
+.Renviron
+
+# Temporary files
+*~
+*.tmp
+*.swp
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Node modules (if any)
+node_modules/ 
