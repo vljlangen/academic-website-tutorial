@@ -1,5 +1,5 @@
-academic-website-in-30-minutes
-why-this-approach
+fig:process-flow
+five-step-website-launch
 what-youll-learn
 prerequisites
 essential-setup

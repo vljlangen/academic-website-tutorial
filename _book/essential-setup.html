@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="academic-website-in-30-minutes.html"/>
+<link rel="prev" href="five-step-website-launch.html"/>
 <link rel="next" href="clone-template-start-customizing.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -52,6 +52,11 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="libs/viz-1.8.2/viz.js"></script>
+<link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="libs/grViz-binding-1.0.11/grViz.js"></script>
 
 
 <style type="text/css">
@@ -143,15 +148,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
 <ul>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#our-approach"><i class="fa fa-check"></i>Our Approach</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-youll-build"><i class="fa fa-check"></i>What You’ll Build</a></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html#the-guide"><i class="fa fa-check"></i>The Guide</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#our-approach"><i class="fa fa-check"></i>Our Approach</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#why-this-approach"><i class="fa fa-check"></i>Why This Approach?</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html"><i class="fa fa-check"></i><b>1</b> Academic Website in 30 Minutes</a>
+<li class="chapter" data-level="1" data-path="five-step-website-launch.html"><a href="five-step-website-launch.html"><i class="fa fa-check"></i><b>1</b> Five-Step Website Launch</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html#why-this-approach"><i class="fa fa-check"></i><b>1.1</b> Why This Approach?</a></li>
-<li class="chapter" data-level="1.2" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html#what-youll-learn"><i class="fa fa-check"></i><b>1.2</b> What You’ll Learn</a></li>
-<li class="chapter" data-level="1.3" data-path="academic-website-in-30-minutes.html"><a href="academic-website-in-30-minutes.html#prerequisites"><i class="fa fa-check"></i><b>1.3</b> Prerequisites</a></li>
+<li class="chapter" data-level="" data-path="five-step-website-launch.html"><a href="five-step-website-launch.html#the-5-step-process"><i class="fa fa-check"></i>The 5-Step Process</a></li>
+<li class="chapter" data-level="1.1" data-path="five-step-website-launch.html"><a href="five-step-website-launch.html#what-youll-learn"><i class="fa fa-check"></i><b>1.1</b> What You’ll Learn</a></li>
+<li class="chapter" data-level="1.2" data-path="five-step-website-launch.html"><a href="five-step-website-launch.html#prerequisites"><i class="fa fa-check"></i><b>1.2</b> Prerequisites</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="essential-setup.html"><a href="essential-setup.html"><i class="fa fa-check"></i><b>2</b> Essential Setup</a>
 <ul>
@@ -281,6 +286,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="essential-setup" class="section level1 hasAnchor" number="2">
 <h1><span class="header-section-number">Chapter 2</span> Essential Setup<a href="essential-setup.html#essential-setup" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<br><br>
+<img src="images/setup.jpg" alt="Chapter introduction image" style="max-width: 100%; height: auto;">
+<figcaption style="font-size: 0.9em; color: gray; margin-top: 5px;">
+Image credit: <a href="https://unsplash.com/photos/a-sign-on-a-rocky-surface-wke_KHh-_A0" target="_blank">Pexels</a>
+</figcaption>
+<p><br><br></p>
 <p>Install three tools and you’re ready to go:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Git</strong> - Save and sync your website</li>
@@ -545,7 +556,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ✅ Go - required for Hugo modules and features<br />
 ✅ Hugo Extended - for building your site (version-matched to template)<br />
 ✅ Text Editor - for editing content</p>
-<p>Next: Clone the academic template and start customizing!</p>
+<hr />
+<p><strong>Next Chapter Preview</strong>: Clone the academic template and start customizing!</p>
 
 </div>
 </div>
@@ -554,7 +566,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="academic-website-in-30-minutes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="five-step-website-launch.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="clone-template-start-customizing.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
